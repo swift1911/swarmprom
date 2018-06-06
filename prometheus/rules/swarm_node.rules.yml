@@ -42,3 +42,11 @@ groups:
       description: Swarm node {{ $labels.node_name }} disk is going to fill up in
         6h.
       summary: Disk fill alert for Swarm node '{{ $labels.node_name }}'
+  - alert: service down
+    expr: up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      description: 服务{{ $labels.job }}挂了 机器：{{ $labels.instance }}
+      summary: 服务异常
