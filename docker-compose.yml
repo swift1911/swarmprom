@@ -116,7 +116,7 @@ services:
     networks:
       - net
     environment:
-      - "ALERTMANAGER_URIS=default:http://alertmanager:9093"
+      - "ALERTMANAGER_URIS=default:http://alertmanager.fangdd.cn"
     deploy:
       mode: replicated
       replicas: 1
