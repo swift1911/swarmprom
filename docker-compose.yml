@@ -150,7 +150,7 @@ services:
           memory: 64M
 
   prometheus:
-    image: stefanprodan/swarmprom-prometheus:v2.2.0-rc.0
+    image: docker.esf.fangdd.net/prometheus
     networks:
       - net
     command:
